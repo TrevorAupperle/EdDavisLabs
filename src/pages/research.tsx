@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-export default function Home() {
+export default function Research() {
   return (
     <>
       <Head>
@@ -8,7 +8,7 @@ export default function Home() {
         <meta name="description" content="Website for Dr. Ed Davis" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="">Home page</div>
+      <div className="">Research page</div>
     </>
   );
 }
