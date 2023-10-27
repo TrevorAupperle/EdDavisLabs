@@ -45,15 +45,16 @@ export default function Home() {
         <meta name="description" content="Website for Dr. Ed Davis" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="text-auburnBlue-900 px-8 py-6 text-4xl">
+      <div className="text-auburnBlue-900 px-4 py-6 text-2xl sm:px-8 sm:text-4xl">
         <h1>
           Materials research to improve{" "}
           <span className="text-auburnOrange-900">health</span>
-          <br />
-          and the <span className="text-auburnOrange-900">environment</span>.
+          <br className="hidden sm:block" />
+          <span className="sm:hidden"> </span>and the{" "}
+          <span className="text-auburnOrange-900">environment</span>.
         </h1>
       </div>
-      <div className="text-auburnBlue-900 flex items-center gap-6 px-8 py-6">
+      <div className="text-auburnBlue-900 flex flex-col items-center gap-6 px-4 py-6 sm:flex-row sm:px-8">
         <Highlight
           headerName="Research"
           headerSvg="/svgs/ConicalFlask.svg"
@@ -78,7 +79,7 @@ export default function Home() {
           linkHref="/outreach"
         />
       </div>
-      <div className="relative h-[300px] w-full">
+      <div className="relative h-[400px] w-full sm:h-[300px]">
         <Image
           src="/Hero.png"
           objectFit="cover"
@@ -86,8 +87,8 @@ export default function Home() {
           alt="Research Image"
         />
       </div>
-      <div className="flex flex-col gap-6 px-8 py-6">
-        <div className="flex items-end justify-between">
+      <div className="flex flex-col gap-6 py-6 sm:px-8">
+        <div className="flex flex-col items-end justify-between gap-4 px-4 sm:flex-row sm:gap-0 sm:px-0">
           <div className="text-auburnBlue-900 flex flex-col gap-2">
             <h4 className="text-xl font-bold">Current Funding</h4>
             <p className="text-sm">
@@ -97,12 +98,12 @@ export default function Home() {
           </div>
           <Link
             href="/research"
-            className="bg-auburnOrange-900 cursor-pointer rounded-lg px-4 py-2 text-white"
+            className="bg-auburnOrange-900 w-full cursor-pointer rounded-lg px-4 py-2 text-center text-white sm:w-fit"
           >
             View more
           </Link>
         </div>
-        <div className="flex items-start gap-4">
+        <div className="flex flex-col items-start gap-8 sm:flex-row sm:gap-4">
           {Funding.map((funding, index) => (
             <TimelineSection
               key={index}

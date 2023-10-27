@@ -49,7 +49,6 @@ const NavLinks = () => {
       const link = linkRef.current;
       if (link) {
         const selectedLink = link[selected];
-        console.log(selectedLink?.offsetLeft, selectedLink?.clientWidth);
         setBackgroundPillOffset(selectedLink?.offsetLeft ?? 0);
         setBackgroundPillWidth(selectedLink?.clientWidth ?? 0);
       }
@@ -64,8 +63,8 @@ const NavLinks = () => {
   }, [selected]);
 
   return (
-    <div className="relative flex items-center gap-4 text-sm">
-      <div className="border-auburnBlue-900 flex items-center rounded-3xl border">
+    <div className="relative flex flex-col items-center gap-4 text-xs sm:flex-row sm:text-sm">
+      <div className="border-auburnBlue-900 flex w-full items-center justify-between rounded-3xl border sm:w-fit sm:justify-normal">
         {Links.map((link, index) => {
           if (index != Links.length - 1)
             return (
@@ -94,7 +93,7 @@ const NavLinks = () => {
             return (linkRef.current[Links.length - 1] = el);
           }
         }}
-        className="bg-auburnBlue-900 cursor-pointer rounded-3xl px-4 py-2 text-white"
+        className="bg-auburnBlue-900 hidden cursor-pointer rounded-3xl px-4 py-2 text-white sm:block"
         onClick={() => setSelected(Links.length - 1)}
       >
         Contact
