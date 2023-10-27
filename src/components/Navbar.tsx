@@ -4,7 +4,7 @@ import NavLinks from "./NavLinks";
 
 const Navbar = () => {
   return (
-    <nav className="text-auburnBlue-900 flex w-full justify-between px-6 py-4">
+    <nav className="text-auburnBlue-900 flex w-full justify-between px-8 py-4">
       <Link href="/" className="flex items-center gap-2">
         <Image
           src="/svgs/PolymersTest.svg"
