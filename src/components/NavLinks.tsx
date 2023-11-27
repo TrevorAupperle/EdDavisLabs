@@ -16,10 +16,6 @@ const Links = [
     path: "/teaching",
   },
   {
-    name: "Outreach",
-    path: "/outreach",
-  },
-  {
     name: "People",
     path: "/people",
   },
@@ -64,7 +60,7 @@ const NavLinks = () => {
 
   return (
     <div className="relative flex flex-col items-center gap-4 text-xs sm:flex-row sm:text-sm">
-      <div className="border-auburnBlue-900 flex w-full items-center justify-between rounded-3xl border sm:w-fit sm:justify-normal">
+      <div className="flex w-full items-center justify-between rounded-3xl border border-auburnBlue-900 sm:w-fit sm:justify-normal">
         {Links.map((link, index) => {
           if (index != Links.length - 1)
             return (
@@ -93,13 +89,13 @@ const NavLinks = () => {
             return (linkRef.current[Links.length - 1] = el);
           }
         }}
-        className="bg-auburnBlue-900 hidden cursor-pointer rounded-3xl px-4 py-2 text-white sm:block"
+        className="hidden cursor-pointer rounded-3xl bg-auburnBlue-900 px-4 py-2 text-white sm:block"
         onClick={() => setSelected(Links.length - 1)}
       >
         Contact
       </Link>
       <span
-        className="bg-auburnBlue-900 absolute bottom-0 -z-10 block h-full rounded-3xl transition-all duration-300"
+        className="absolute bottom-0 -z-10 block h-full rounded-3xl bg-auburnBlue-900 transition-all duration-300"
         style={{
           left: backgroundPillOffset,
           width: backgroundPillWidth,

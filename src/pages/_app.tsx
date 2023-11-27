@@ -5,7 +5,7 @@ import "~/styles/globals.css";
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
-    <main className="flex w-full flex-col">
+    <main className="flex min-h-screen w-full flex-col">
       <Navbar />
       <Component {...pageProps} />
     </main>
