@@ -32,7 +32,7 @@ export default function Contact() {
                 width={24}
                 alt="Building"
               />
-              <h5>1603 Olivia Way Auburn, AL 36830</h5>
+              <h5>274 Wilmore Laboratories, AL 36830</h5>
             </div>
             <Link
               href="tel:+1(334)844-5471"
