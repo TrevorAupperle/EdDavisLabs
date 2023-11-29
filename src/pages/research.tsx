@@ -2,7 +2,6 @@ import Head from "next/head";
 import { currentFunding, fundingHistory } from "public/data/funding";
 import FundingCard from "~/components/FundingCard";
 
-// get the total funding from current and previous funding and format to a string like "$5.2M" with no decimals
 const totalFunding = currentFunding
   .concat(fundingHistory)
   .reduce((acc, fund) => acc + fund.funding, 0)
@@ -26,9 +25,9 @@ export default function Research() {
   return (
     <>
       <Head>
-        <title>Ed Davis Labs</title>
+        <title>Research | Ed Davis Labs</title>
         <meta name="description" content="Website for Dr. Ed Davis" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/svgs/PolymersTest.svg" />
       </Head>
       <div className="flex flex-col items-center">
         <div className="flex max-w-7xl flex-col gap-6 px-4 text-auburnBlue-900">
@@ -61,7 +60,7 @@ export default function Research() {
               ))}
             </div>
           </div>
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-6 pb-6">
             <div className="text-xl font-bold">Previous funding</div>
             <div className="flex flex-col gap-4">
               {fundingHistory.map((fund, index) => (

@@ -4,7 +4,7 @@ import NavLinks from "./NavLinks";
 
 const Navbar = () => {
   return (
-    <nav className="text-auburnBlue-900 flex w-full flex-col justify-between gap-2 p-4 sm:flex-row sm:gap-0 sm:px-8 sm:py-4">
+    <nav className="flex w-full max-w-7xl flex-col justify-between gap-2 p-4 text-auburnBlue-900 sm:flex-row sm:gap-0 sm:py-4">
       <Link
         href="/"
         className="flex items-center justify-center gap-2 px-2 sm:justify-normal"
@@ -21,7 +21,7 @@ const Navbar = () => {
       <div className="flex items-center gap-4">
         <Link
           href="/contact"
-          className="bg-auburnBlue-900 block w-full cursor-pointer rounded-3xl px-4 py-1 text-center text-white sm:hidden"
+          className="block w-full cursor-pointer rounded-3xl bg-auburnBlue-900 px-4 py-1 text-center text-white sm:hidden"
         >
           Contact
         </Link>

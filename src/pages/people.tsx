@@ -6,14 +6,15 @@ import {
 } from "public/data/people";
 import Image from "next/image";
 import StudentCard from "~/components/StudentCard";
+import Link from "next/link";
 
 export default function People() {
   return (
     <>
       <Head>
-        <title>Ed Davis Labs</title>
+        <title>People | Ed Davis Labs</title>
         <meta name="description" content="Website for Dr. Ed Davis" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/svgs/PolymersTest.svg" />
       </Head>
       <div className="flex flex-col items-center">
         <div className="flex max-w-7xl flex-col gap-6 px-4 text-auburnBlue-900">
@@ -49,7 +50,7 @@ export default function People() {
                         width={24}
                         alt="Graduation Cap"
                       />
-                      <div>{degree.type}</div>
+                      <div className="font-bold">{degree.type}</div>
                       <div>
                         {degree.school +
                           ", " +
@@ -64,14 +65,22 @@ export default function People() {
                       </div>
                     </div>
                   ))}
+                  <Link
+                    href="https://www.aub.ie/ewdavislabs-cv"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rounded-lg bg-auburnOrange-800 px-4 py-2 text-center text-white hover:bg-auburnOrange-900"
+                  >
+                    Dr. Davis&apos; CV
+                  </Link>
                 </div>
                 <div className="w-3/4">{professor.description}</div>
               </div>
             </div>
           </div>
         </div>
-        <div className="mt-6 flex h-full w-full flex-col items-center rounded-t-xl bg-auburnBlue-900 py-6 text-white">
-          <div className="flex max-w-7xl flex-col gap-8">
+        <div className="mt-6 flex h-full w-full flex-col items-center rounded-t-xl bg-auburnBlue-900 p-6 text-white">
+          <div className="flex max-w-7xl flex-col gap-6">
             <div className="text-xl font-bold">Graduate Students</div>
             <div className="grid grid-cols-4 gap-8">
               {graduateStudents.map((student, index) => (
@@ -79,7 +88,7 @@ export default function People() {
               ))}
             </div>
             <div className="text-xl font-bold">Undergraduate Students</div>
-            <div className="grid grid-cols-4 gap-8">
+            <div className="grid grid-cols-4 gap-6">
               {undergraduateStudents.map((student, index) => (
                 <StudentCard key={index} {...student} />
               ))}
