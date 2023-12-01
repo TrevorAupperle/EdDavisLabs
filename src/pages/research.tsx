@@ -32,7 +32,7 @@ export default function Research() {
       <div className="flex flex-col items-center">
         <div className="flex max-w-7xl flex-col gap-6 px-4 text-auburnBlue-900">
           <div className="flex flex-col items-center gap-2 pt-4">
-            <h2 className="text-3xl font-bold">
+            <h2 className="text-center text-3xl font-bold sm:text-left">
               Journey of Bio-materials Discovery
             </h2>
             <p className="text-center">
@@ -41,14 +41,14 @@ export default function Research() {
               projects, supported by diverse funding sources
             </p>
           </div>
-          <div className="flex divide-x-2 divide-white rounded-lg bg-orange-500 bg-opacity-10">
+          <div className="flex flex-col divide-y-2 divide-white rounded-lg bg-orange-500 bg-opacity-10 md:flex-row md:divide-x-2">
             {stats.map((stat, index) => (
               <div
                 key={index}
                 className="flex w-full flex-col items-center gap-2 p-8"
               >
                 <div className="text-3xl font-bold">{stat.value}</div>
-                <div>{stat.label}</div>
+                <div className="text-center">{stat.label}</div>
               </div>
             ))}
           </div>

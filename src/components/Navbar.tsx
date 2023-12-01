@@ -25,7 +25,7 @@ const Navbar = () => {
         >
           Contact
         </Link>
-        <button className="px-1">
+        <button className="hidden px-1 sm:block">
           <Image
             src="/svgs/Magnifier.svg"
             width={32}

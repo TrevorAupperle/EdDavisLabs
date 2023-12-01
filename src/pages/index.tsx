@@ -42,11 +42,11 @@ export default function Home() {
           linkHref="/teaching"
         />
         <Highlight
-          headerName="Outreach"
+          headerName="People"
           headerSvg="/svgs/Users.svg"
-          description="Committed to community engagement and fostering STEM inspiration: Bridging academia and public through meaningful outreach initiatives and educational endeavors at Auburn University."
-          linkText="Activities"
-          linkHref="/outreach"
+          description="Dedicated to nurturing academic excellence and professional growth: Connecting theory and practice through mentorship and guidance of undergraduate and graduate students at Auburn University."
+          linkText="People"
+          linkHref="/people"
         />
       </div>
       <div className="relative h-[400px] w-full sm:h-[300px]">
@@ -68,7 +68,7 @@ export default function Home() {
           </div>
           <Link
             href="/research"
-            className="w-full cursor-pointer rounded-lg bg-auburnOrange-900 px-4 py-2 text-center text-white sm:w-fit"
+            className="w-full cursor-pointer whitespace-nowrap rounded-lg bg-auburnOrange-900 px-4 py-2 text-center text-white sm:w-fit"
           >
             View more
           </Link>

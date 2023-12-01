@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const FundingCard = (fund: Funding) => {
   return (
-    <div className="flex gap-6 text-auburnBlue-900">
+    <div className="flex flex-col gap-6 text-auburnBlue-900 sm:flex-row">
       <div className="min-w-[150px] font-bold text-auburnOrange-900">
         {fund.startDate.toLocaleString("default", {
           month: "long",

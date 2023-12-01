@@ -18,7 +18,7 @@ export default function Contact() {
         <link rel="icon" href="/svgs/PolymersTest.svg" />
       </Head>
       <div className="flex h-full w-full grow flex-col items-center justify-center gap-12 bg-gradient-to-t from-auburnBlue-100 px-8">
-        <div className="flex max-w-7xl gap-12">
+        <div className="flex max-w-7xl flex-col gap-12 pt-6 sm:flex-row sm:p-0">
           <div className="flex h-full flex-col justify-center gap-8">
             <h2 className="text-3xl font-bold">Get in touch</h2>
             <h4>
@@ -37,7 +37,7 @@ export default function Contact() {
                 <h5>274 Wilmore Laboratories, AL 36830</h5>
               </div>
               <Link
-                href="tel:+1(334)844-5471"
+                href="tel:+1(334)329-9592"
                 className="flex w-fit items-center gap-4"
               >
                 <Image
@@ -46,7 +46,7 @@ export default function Contact() {
                   width={24}
                   alt="Phone"
                 />
-                <h5>+1 (334) 844-5471</h5>
+                <h5>+1 (334) 329-9592</h5>
               </Link>
               <Link
                 href="mailto:edward.davis@auburn.edu"
@@ -62,7 +62,7 @@ export default function Contact() {
               </Link>
             </div>
           </div>
-          <div className="flex w-full flex-col gap-2">
+          <div className="flex w-full flex-col gap-2 pb-6 sm:p-0">
             <TextInput
               label="First name"
               value={firstName}

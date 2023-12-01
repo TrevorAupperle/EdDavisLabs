@@ -19,7 +19,7 @@ export default function People() {
       <div className="flex flex-col items-center">
         <div className="flex max-w-7xl flex-col gap-6 px-4 text-auburnBlue-900">
           <div className="flex flex-col items-center gap-2 pt-4">
-            <h2 className="text-3xl font-bold">
+            <h2 className="text-center text-3xl font-bold sm:text-left">
               Faces of Bio-materials Innovation
             </h2>
             <p className="text-center">
@@ -28,8 +28,8 @@ export default function People() {
               undergraduate and graduate assistants
             </p>
           </div>
-          <div className="flex gap-4 text-auburnBlue-900">
-            <div className="relative min-h-[50px] min-w-[250px] rounded-lg">
+          <div className="flex flex-col gap-4 text-auburnBlue-900 sm:flex-row">
+            <div className="relative min-h-[300px] min-w-[250px] rounded-lg sm:min-h-[50px]">
               <Image
                 src="/DavisHeadshot.jpg"
                 objectFit="cover"
@@ -39,8 +39,10 @@ export default function People() {
               />
             </div>
             <div className="flex flex-col gap-4">
-              <div className="text-xl font-bold">{professor.name}</div>
-              <div className="flex gap-4">
+              <div className="text-center text-xl font-bold sm:text-left">
+                {professor.name}
+              </div>
+              <div className="flex flex-col gap-4 sm:flex-row">
                 <div className="flex w-full flex-col gap-4">
                   {professor.degrees.map((degree, index) => (
                     <div key={index} className="flex items-start gap-2">
@@ -74,7 +76,9 @@ export default function People() {
                     Dr. Davis&apos; CV
                   </Link>
                 </div>
-                <div className="w-3/4">{professor.description}</div>
+                <div className="w-full text-center sm:w-3/4 sm:text-left">
+                  {professor.description}
+                </div>
               </div>
             </div>
           </div>
@@ -82,13 +86,13 @@ export default function People() {
         <div className="mt-6 flex h-full w-full flex-col items-center rounded-t-xl bg-auburnBlue-900 p-6 text-white">
           <div className="flex max-w-7xl flex-col gap-6">
             <div className="text-xl font-bold">Graduate Students</div>
-            <div className="grid grid-cols-4 gap-8">
+            <div className="flex flex-col gap-6 sm:grid sm:grid-cols-4">
               {graduateStudents.map((student, index) => (
                 <StudentCard key={index} {...student} />
               ))}
             </div>
             <div className="text-xl font-bold">Undergraduate Students</div>
-            <div className="grid grid-cols-4 gap-6">
+            <div className="flex flex-col gap-6 sm:grid sm:grid-cols-4">
               {undergraduateStudents.map((student, index) => (
                 <StudentCard key={index} {...student} />
               ))}

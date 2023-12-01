@@ -60,7 +60,7 @@ const NavLinks = () => {
 
   return (
     <div className="relative flex flex-col items-center gap-4 text-xs sm:flex-row sm:text-sm">
-      <div className="flex w-full items-center justify-between rounded-3xl border border-auburnBlue-900 sm:w-fit sm:justify-normal">
+      <div className="flex w-full items-center justify-between overflow-auto rounded-3xl border border-auburnBlue-900 sm:w-fit sm:justify-normal">
         {Links.map((link, index) => {
           if (index != Links.length - 1)
             return (
